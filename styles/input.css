@@ -33,3 +33,51 @@
     @apply z-10 overflow-hidden divide-gray-100  md:max-w-xs w-full;
 }
 /* end styles */
+
+
+
+
+/* Article TOC Styles */
+
+/* General TOC Container */
+.toc-list {
+    @apply list-none p-0 m-0 grid grid-cols-1 gap-2;
+}
+
+/* TOC Item Styles */
+.toc-item {
+    @apply text-gray-500; /* Space between TOC items */
+}
+
+/* Heading Levels Styling */
+.toc-level-1 {
+    @apply text-base font-medium text-gray-700 relative; /* Add padding and improved color */
+}
+
+.toc-level-2 {
+    @apply text-base font-medium text-gray-700 relative; /* Add padding and improved color */
+}
+
+.toc-level-2::before {
+    content: "";
+    @apply absolute top-1/2 left-0 w-0 h-4 bg-gray-300; /* Add a line indicator for sub-items */
+    transform: translateY(-50%);
+}
+
+.toc-level-3 {
+    @apply text-sm font-normal text-gray-600 pl-4 relative; /* Additional padding and improved color */
+}
+
+.toc-level-3::before {
+    content: "";
+    @apply absolute top-1/2 left-0 w-0 h-4 bg-gray-300; /* Line indicator for sub-items */
+    transform: translateY(-50%);
+}
+
+/* Additional Styles for Better Visibility */
+.toc-item a {
+    @apply text-sky-500 hover:text-primary-700;
+}
+
+/* End */
+
