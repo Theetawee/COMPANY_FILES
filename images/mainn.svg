@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120">
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -50; }
+    }
+    .text { font-family: 'Courier New', monospace; font-weight: bold; font-size: 32px; letter-spacing: 1px; }
+    .tech-circle { fill: none; stroke: #1abc9c; stroke-width: 2; stroke-dasharray: 8 4; }
+    .animate-dash { animation: dash 15s linear infinite; }
+    .animate-blink { animation: blink 1.5s infinite; }
+    .animate-pulse { animation: pulse 3s infinite; }
+    .animate-rotate { animation: rotate 20s linear infinite; transform-origin: 150px 50px; }
+  </style>
+
+  <!-- Outer Animated Circle -->
+  <circle cx="150" cy="50" r="45" class="tech-circle animate-dash animate-rotate" />
+
+  <!-- Unified Branding Text -->
+  <text x="45" y="58" class="text" fill="#34495e">Waanverse Labs</text>
+
+  <!-- Animated Dots (Blinking and Pulsing) -->
+  <g transform="translate(150, 50)">
+    <circle cx="0" cy="-30" r="5" fill="#e74c3c" class="animate-blink" />
+    <circle cx="30" cy="20" r="5" fill="#3498db" class="animate-pulse" />
+    <circle cx="-30" cy="20" r="5" fill="#f39c12" class="animate-pulse" />
+  </g>
+
+  <!-- Underline Path -->
+  <path d="M30,90 L270,90" stroke="#2c3e50" stroke-width="2" />
+  <circle cx="30" cy="90" r="3" fill="#2c3e50" />
+  <circle cx="270" cy="90" r="3" fill="#2c3e50" />
+</svg>

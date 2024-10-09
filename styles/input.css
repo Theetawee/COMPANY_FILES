@@ -81,3 +81,36 @@
 
 /* End */
 
+
+
+/* Dropdown */
+    /* Keyframes for the dropdown animation */
+    @keyframes dropdownIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes dropdownOut {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-100%);
+        }
+    }
+
+    /* Classes to control animations */
+    .animate-dropdown-in {
+        animation: dropdownIn 0.3s ease-out forwards;
+    }
+
+    .animate-dropdown-out {
+        animation: dropdownOut 0.3s ease-in forwards;
+    }
+
+
+/* end  */
