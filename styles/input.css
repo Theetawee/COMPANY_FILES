@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin 'flowbite/plugin';
 @plugin '@tailwindcss/typography';
@@ -8,41 +8,41 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary-50: #eff9ff;
-  --color-primary-100: #def2ff;
-  --color-primary-200: #b6e7ff;
-  --color-primary-300: #75d6ff;
-  --color-primary-400: #2cc1ff;
-  --color-primary-500: #00a4ef;
-  --color-primary-600: #0087d4;
-  --color-primary-700: #006bab;
-  --color-primary-800: #005b8d;
-  --color-primary-900: #064c74;
-  --color-primary-950: #04304d;
+    --color-primary-50: #e6f8f7;
+    --color-primary-100: #ccf0ef;
+    --color-primary-200: #99e1de;
+    --color-primary-300: #66d2cd;
+    --color-primary-400: #33c3bc;
+    --color-primary-500: #00b4ab;
+    --color-primary-600: #00958f;
+    --color-primary-700: #007770;
+    --color-primary-800: #005e59;
+    --color-primary-900: #004946;
+    --color-primary-950: #002f2e;
 
-  --color-gray-50: #ffffff;
-  --color-gray-100: #efefef;
-  --color-gray-200: #dcdcdc;
-  --color-gray-300: #bdbdbd;
-  --color-gray-400: #989898;
-  --color-gray-500: #7c7c7c;
-  --color-gray-600: #656565;
-  --color-gray-700: #525252;
-  --color-gray-800: #464646;
-  --color-gray-900: #3d3d3d;
-  --color-gray-950: #292929;
+    --color-gray-50: #ffffff;
+    --color-gray-100: #efefef;
+    --color-gray-200: #dcdcdc;
+    --color-gray-300: #bdbdbd;
+    --color-gray-400: #989898;
+    --color-gray-500: #7c7c7c;
+    --color-gray-600: #656565;
+    --color-gray-700: #525252;
+    --color-gray-800: #464646;
+    --color-gray-900: #3d3d3d;
+    --color-gray-950: #292929;
 
-  --color-secondary-50: #eff5fe;
-  --color-secondary-100: #e8f0fd;
-  --color-secondary-200: #cbdcfa;
-  --color-secondary-300: #acc4f5;
-  --color-secondary-400: #8ba3ee;
-  --color-secondary-500: #6e84e6;
-  --color-secondary-600: #5361d8;
-  --color-secondary-700: #444ebe;
-  --color-secondary-800: #39429a;
-  --color-secondary-900: #353e7a;
-  --color-secondary-950: #1f2347;
+    --color-secondary-50: #eff5fe;
+    --color-secondary-100: #e8f0fd;
+    --color-secondary-200: #cbdcfa;
+    --color-secondary-300: #acc4f5;
+    --color-secondary-400: #8ba3ee;
+    --color-secondary-500: #6e84e6;
+    --color-secondary-600: #5361d8;
+    --color-secondary-700: #444ebe;
+    --color-secondary-800: #39429a;
+    --color-secondary-900: #353e7a;
+    --color-secondary-950: #1f2347;
 }
 
 /*
@@ -54,17 +54,17 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }
 
 @utility input {
-  @apply bg-gray-50 border rounded-md border-gray-300 text-gray-900  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-1;
+    @apply bg-gray-50 border rounded-md border-gray-300 text-gray-900  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-1;
 }
 
 @layer utilities {
@@ -75,7 +75,7 @@
         scroll-padding-top: 100px;
     }
     *:disabled {
-        @apply cursor-not-allowed;
+        @apply cursor-not-allowed !opacity-70;
     }
 }
 .help-text {
@@ -96,9 +96,6 @@
 }
 /* end styles */
 
-
-
-
 /* Article TOC Styles */
 
 /* image  */
@@ -109,9 +106,6 @@
 .image_resized {
     @apply w-full! md:w-72! max-w-full h-auto;
 }
-
-
-
 
 /* General TOC Container */
 .toc-list {
@@ -155,36 +149,41 @@
 
 /* End */
 
-
-
 /* Dropdown */
-    /* Keyframes for the dropdown animation */
-    @keyframes dropdownIn {
-        from {
-            transform: translateY(-100%);
-        }
-        to {
-            transform: translateY(0);
-        }
+/* Keyframes for the dropdown animation */
+@keyframes dropdownIn {
+    from {
+        transform: translateY(-100%);
     }
-
-    @keyframes dropdownOut {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-100%);
-        }
+    to {
+        transform: translateY(0);
     }
+}
 
-    /* Classes to control animations */
-    .animate-dropdown-in {
-        animation: dropdownIn 0.3s ease-out forwards;
+@keyframes dropdownOut {
+    from {
+        transform: translateY(0);
     }
-
-    .animate-dropdown-out {
-        animation: dropdownOut 0.3s ease-in forwards;
+    to {
+        transform: translateY(-100%);
     }
+}
 
+/* Classes to control animations */
+.animate-dropdown-in {
+    animation: dropdownIn 0.3s ease-out forwards;
+}
+
+.animate-dropdown-out {
+    animation: dropdownOut 0.3s ease-in forwards;
+}
 
 /* end  */
+
+.select-input {
+    @apply border border-gray-300 text-gray-900 rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 text-base;
+}
+
+.input-label{
+    @apply block mb-2 text-base font-medium text-gray-900 dark:text-white;
+}
