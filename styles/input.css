@@ -8,17 +8,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --color-primary-50: #e6f8f7;
-    --color-primary-100: #ccf0ef;
-    --color-primary-200: #99e1de;
-    --color-primary-300: #66d2cd;
-    --color-primary-400: #33c3bc;
-    --color-primary-500: #00b4ab;
-    --color-primary-600: #00958f;
-    --color-primary-700: #007770;
-    --color-primary-800: #005e59;
-    --color-primary-900: #004946;
-    --color-primary-950: #002f2e;
+    --color-primary-50: #eff9ff;
+    --color-primary-100: #def2ff;
+    --color-primary-200: #b6e7ff;
+    --color-primary-300: #75d6ff;
+    --color-primary-400: #2cc1ff;
+    --color-primary-500: #00a4ef;
+    --color-primary-600: #0087d4;
+    --color-primary-700: #006bab;
+    --color-primary-800: #005b8d;
+    --color-primary-900: #064c74;
+    --color-primary-950: #04304d;
 
     --color-gray-50: #ffffff;
     --color-gray-100: #efefef;
@@ -184,6 +184,6 @@
     @apply border border-gray-300 text-gray-900 rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 text-base;
 }
 
-.input-label{
+.input-label {
     @apply block mb-2 text-base font-medium text-gray-900 dark:text-white;
 }
